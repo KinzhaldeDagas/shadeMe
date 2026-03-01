@@ -95,7 +95,7 @@
       <Command>copy "$(TargetPath)" "$(OblivionPath)\data\obse\plugins\$(TargetFileName)"</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>cscript.exe "$(SolutionDir)\BuildIncrement.jse"</Command>
+      <Command>cscript.exe //nologo "$(ProjectDir)BuildIncrement.wsf" "$(ProjectDir)"</Command>
     </PreBuildEvent>
     <PreBuildEvent>
       <Message>Setting build number...</Message>
@@ -129,7 +129,7 @@
       <Command>copy "$(TargetPath)" "$(OblivionPath)\data\obse\plugins\$(TargetFileName)"</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>cscript.exe "$(SolutionDir)\BuildIncrement.jse"</Command>
+      <Command>cscript.exe //nologo "$(ProjectDir)BuildIncrement.wsf" "$(ProjectDir)"</Command>
     </PreBuildEvent>
     <PreBuildEvent>
       <Message>Setting build number...</Message>
