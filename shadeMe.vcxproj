@@ -44,6 +44,9 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
+    <xOBSEPath>C:\src\xOBSE</xOBSEPath>
+  </PropertyGroup>
+  <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
@@ -69,7 +72,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\..;$(SolutionDir)\..\obse\obse;$(SolutionDir)\..\obse\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\..;$(xOBSEPath)\obse;$(xOBSEPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;OBLIVION_VERSION=0x010201A0;OBLIVION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
@@ -99,7 +102,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\..;$(SolutionDir)\..\obse\obse;$(SolutionDir)\..\obse\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\..;$(xOBSEPath)\obse;$(xOBSEPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;OBLIVION_VERSION=0x010201A0;OBLIVION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
@@ -139,35 +142,35 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\obse\obse\GameActorValues.cpp">
+    <ClCompile Include="$(xOBSEPath)\obse\GameActorValues.cpp">
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
       </DebugInformationFormat>
     </ClCompile>
-    <ClCompile Include="..\obse\obse\GameAPI.cpp" />
-    <ClCompile Include="..\obse\obse\GameBSExtraData.cpp" />
-    <ClCompile Include="..\obse\obse\GameData.cpp" />
-    <ClCompile Include="..\obse\obse\GameExtraData.cpp" />
-    <ClCompile Include="..\obse\obse\GameForms.cpp" />
-    <ClCompile Include="..\OBSE\obse\GameMenus.cpp" />
-    <ClCompile Include="..\obse\obse\GameObjects.cpp" />
-    <ClCompile Include="..\OBSE\obse\GameOSDepend.cpp" />
-    <ClCompile Include="..\OBSE\obse\GameProcess.cpp" />
-    <ClCompile Include="..\obse\obse\GameTasks.cpp" />
-    <ClCompile Include="..\OBSE\obse\GameTiles.cpp" />
-    <ClCompile Include="..\obse\obse\GameTypes.cpp" />
-    <ClCompile Include="..\obse\obse\NiAPI.cpp" />
-    <ClCompile Include="..\OBSE\obse\NiCollision.cpp" />
-    <ClCompile Include="..\OBSE\obse\NiControllers.cpp" />
-    <ClCompile Include="..\OBSE\obse\NiExtraData.cpp" />
-    <ClCompile Include="..\OBSE\obse\NiGeometry.cpp" />
-    <ClCompile Include="..\obse\obse\NiNodes.cpp" />
-    <ClCompile Include="..\OBSE\obse\NiObjects.cpp" />
-    <ClCompile Include="..\OBSE\obse\NiProperties.cpp" />
-    <ClCompile Include="..\OBSE\obse\NiRenderer.cpp" />
-    <ClCompile Include="..\obse\obse\NiRTTI.cpp" />
-    <ClCompile Include="..\OBSE\obse\NiTypes.cpp" />
-    <ClCompile Include="..\obse\obse\Script.cpp" />
-    <ClCompile Include="..\obse\obse\Utilities.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\GameAPI.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\GameBSExtraData.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\GameData.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\GameExtraData.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\GameForms.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\GameMenus.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\GameObjects.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\GameOSDepend.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\GameProcess.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\GameTasks.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\GameTiles.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\GameTypes.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\NiAPI.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\NiCollision.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\NiControllers.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\NiExtraData.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\NiGeometry.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\NiNodes.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\NiObjects.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\NiProperties.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\NiRenderer.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\NiRTTI.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\NiTypes.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\Script.cpp" />
+    <ClCompile Include="$(xOBSEPath)\obse\Utilities.cpp" />
     <ClCompile Include="BoundsCalculator.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="shadeMeInternals.cpp" />
@@ -176,34 +179,34 @@
     <ClCompile Include="ShadowSundries.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\obse\obse\GameActorValues.h" />
-    <ClInclude Include="..\obse\obse\GameAPI.h" />
-    <ClInclude Include="..\obse\obse\GameBSExtraData.h" />
-    <ClInclude Include="..\obse\obse\GameData.h" />
-    <ClInclude Include="..\obse\obse\GameExtraData.h" />
-    <ClInclude Include="..\obse\obse\GameForms.h" />
-    <ClInclude Include="..\OBSE\obse\GameMenus.h" />
-    <ClInclude Include="..\obse\obse\GameObjects.h" />
-    <ClInclude Include="..\OBSE\obse\GameOSDepend.h" />
-    <ClInclude Include="..\OBSE\obse\GameProcess.h" />
-    <ClInclude Include="..\obse\obse\GameTasks.h" />
-    <ClInclude Include="..\OBSE\obse\GameTiles.h" />
-    <ClInclude Include="..\obse\obse\GameTypes.h" />
-    <ClInclude Include="..\obse\obse\NiAPI.h" />
-    <ClInclude Include="..\OBSE\obse\NiCollision.h" />
-    <ClInclude Include="..\OBSE\obse\NiControllers.h" />
-    <ClInclude Include="..\OBSE\obse\NiExtraData.h" />
-    <ClInclude Include="..\OBSE\obse\NiGeometry.h" />
-    <ClInclude Include="..\obse\obse\NiNodes.h" />
-    <ClInclude Include="..\OBSE\obse\NiObjects.h" />
-    <ClInclude Include="..\OBSE\obse\NiProperties.h" />
-    <ClInclude Include="..\OBSE\obse\NiRenderer.h" />
-    <ClInclude Include="..\obse\obse\NiRTTI.h" />
-    <ClInclude Include="..\OBSE\obse\NiTypes.h" />
-    <ClInclude Include="..\obse\obse\ParamInfos.h" />
-    <ClInclude Include="..\obse\obse\PluginAPI.h" />
-    <ClInclude Include="..\obse\obse\Script.h" />
-    <ClInclude Include="..\obse\obse\Utilities.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameActorValues.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameAPI.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameBSExtraData.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameData.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameExtraData.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameForms.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameMenus.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameObjects.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameOSDepend.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameProcess.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameTasks.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameTiles.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\GameTypes.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\NiAPI.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\NiCollision.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\NiControllers.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\NiExtraData.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\NiGeometry.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\NiNodes.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\NiObjects.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\NiProperties.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\NiRenderer.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\NiRTTI.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\NiTypes.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\ParamInfos.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\PluginAPI.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\Script.h" />
+    <ClInclude Include="$(xOBSEPath)\obse\Utilities.h" />
     <ClInclude Include="BoundsCalculator.h" />
     <ClInclude Include="shadeMeInternals.h" />
     <ClInclude Include="ShadowFacts.h" />
@@ -212,9 +215,9 @@
     <ClInclude Include="VersionInfo.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\obse\obse\GameRTTI_1_1.inl" />
-    <None Include="..\obse\obse\GameRTTI_1_2.inl" />
-    <None Include="..\obse\obse\GameRTTI_1_2_416.inl" />
+    <None Include="$(xOBSEPath)\obse\GameRTTI_1_1.inl" />
+    <None Include="$(xOBSEPath)\obse\GameRTTI_1_2.inl" />
+    <None Include="$(xOBSEPath)\obse\GameRTTI_1_2_416.inl" />
     <None Include="Exports.def" />
   </ItemGroup>
   <ItemGroup>
